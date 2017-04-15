@@ -9,7 +9,7 @@ while True:
         else:
             print("Введите числа только от 1 до 9")
     except(ValueError):
-        print("Введите полалуста только число !!!")
+        print("Введите пожалуста только число !!!")
 
 
 if(x >= 1) and (x <= 3):
@@ -20,7 +20,7 @@ if(x >= 1) and (x <= 3):
             n = int(input("Введите число повторений:  "))
             break
         except(ValueError):
-            print("Введите полалуста только число !!!")
+            print("Введите пожалуста только число !!!")
     for i in range(n):
         print(s)
 
@@ -31,7 +31,7 @@ if(x >= 4) and (x <= 6):
             m = int(input("Введите степень:  "))
             break
         except(ValueError):
-            print("Введите полалуста только число !!!")
+            print("Введите пожалуста только число !!!")
     print("%d в степени %d равна %d" % (x, m, x**m))
 
 if(x >= 7) and (x <= 9):
