@@ -1,4 +1,4 @@
-
+# 5. Переписать первое задание разбив его на модули
 from mypack import modul_scr1
 
 while True:
