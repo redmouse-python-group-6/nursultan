@@ -7,7 +7,7 @@ def word_len_print(string, delimiter=" "):
     """
     words = string.split(delimiter)
     for word in words:
-        print(word + " - " + str(len(word)))
+        print("%s - %d" % (word, len(word)))
 
 
 if __name__ == "__main__":
