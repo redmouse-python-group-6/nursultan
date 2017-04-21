@@ -1,26 +1,48 @@
 # -- coding: utf-8 --
-def func(val):
-    """
-        Функция испльзуется первой задании в втором скрипте. Функция принимает в качестве аргумента 
-        возраст возвращает строку.
-    """
-    if (val >= 0) and (val < 7):
-        return "Вам в детский сад"
 
-    elif (val >= 7) and (val < 18):
-        return "Вам школу"
+class Script2:
+    val = 0
 
-    elif (val >= 18) and (val < 25):
-        return "Вам в профессиональное учебное заведение"
+    def __init__(self, age):
+        self.val = age
+        self.func1()
+        self.func2()
+        self.func3()
+        self.func4()
+        self.func5()
+        self.func6()
 
-    elif (val >= 25) and (val < 60):
-        return "Вам на работу"
+    def func1(self):
+        if (self.val >= 0) and (self.val < 7):
+            print("Вам в детский сад")
 
-    elif (val >= 60) and (val <= 120):
-        return "Вам предоставляется выбор"
-    else:
-        a = "Ошибка! Это программа для людей!\n"
-        return a * 5
+    def func2(self):
+        if (self.val >= 7) and (self.val < 18):
+            print("Вам школу")
+
+    def func3(self):
+        if (self.val >= 18) and (self.val < 25):
+            print("Вам в профессиональное учебное заведение")
+
+    def func4(self):
+        if (self.val >= 25) and (self.val < 60):
+            print("Вам на работу")
+
+    def func5(self):
+        if (self.val >= 60) and (self.val <= 120):
+            print("Вам предоставляется выбор")
+
+    def func6(self):
+        if (self.val < 0) or (self.val > 120):
+            a = "Ошибка! Это программа для людей!\n"
+            print(a * 5)
 
 if __name__ == "__main__":
-    print(func.__doc__)
+    age = 0
+    while True:
+        try:
+            age = int(input("Введите ваш возраст: "))
+            break
+        except ValueError:
+            print("Пожалуйста введите коректный возраст !!!")
+    a = Script2(age)
