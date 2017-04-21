@@ -2,10 +2,10 @@
 
 # 5. Переписать первое задание разбив его на модули
 
-from mypack import modul_scr2
+from mypack.modul_scr2 import Script2
 
 age = 0
-
+print("Общество в начале XXI века\n")
 while True:
     try:
         age = int(input("Введите ваш возраст: "))
@@ -13,5 +13,5 @@ while True:
     except ValueError:
         print("Пожалуйста введите коректный возраст !!!")
 
-print(age)
-print(modul_scr2.func(age))
+
+a = Script2(age)

@@ -1,5 +1,5 @@
 # 5. Переписать первое задание разбив его на модули
-from mypack import modul_scr1
+from mypack.modul_scr1 import Script1
 
 while True:
     try:
@@ -12,9 +12,4 @@ while True:
     except ValueError:
         print("Введите пожалуста только число !!!")
 
-if(x >= 1) and (x <= 3):
-    modul_scr1.option_one()
-if(x >= 4) and (x <= 6):
-    modul_scr1.option_two(x)
-if(x >= 7) and (x <= 9):
-    modul_scr1.option_tree(x)
+a = Script1(x)
