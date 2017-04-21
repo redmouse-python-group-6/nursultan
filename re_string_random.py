@@ -25,5 +25,5 @@ print("случайный текст:\n", random_str)
 word = input("Введите слово: ")
 revers_word = word[:: -1]
 print("Реверсивный вид ", revers_word)
-new_str = re.sub(r"%s|%s$" % (word, word), revers_word, random_str)  # Замена в начале или в конце реверс
+new_str = re.sub(r"^%s|%s$" % (word, word), revers_word, random_str)  # Замена в начале или в конце реверс
 print(new_str)
