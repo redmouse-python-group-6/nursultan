@@ -16,7 +16,7 @@ while True:
     if os.path.exists(abs_path):
         break
     else:
-        print("Непрвильно задан путь или токого файла.директории не сушествует !!!")
+        print("Непрвильно задан путь или токого файла/директории не сушествует !!!")
 size = os.path.getsize(abs_path)
 creat_date = os.path.getctime(abs_path)
 change_date = os.path.getmtime(abs_path)
@@ -25,7 +25,7 @@ fd_list = []
 
 if os.path.isdir(abs_path):
     type_fd = "Директория"
-    fd_list = os.listdir(abs_path)
+    fd_list = os.listdir(abs_path)  # если директория то выводим содержания в список
 
 print("Полный путь: ", abs_path)
 print("Размер: %s байт" % size)
