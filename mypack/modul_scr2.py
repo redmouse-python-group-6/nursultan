@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 class Script2:
     val = 0
 
@@ -36,6 +35,7 @@ class Script2:
         if (self.val < 0) or (self.val > 120):
             a = "Ошибка! Это программа для людей!\n"
             print(a * 5)
+
 
 if __name__ == "__main__":
     age = 0
