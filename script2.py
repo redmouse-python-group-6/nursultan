@@ -23,6 +23,9 @@ for line in cur:
             count_dict[i] += int(line[1])
 
 out_file = open("price.csv", "a", newline='')
-writer = csv.writer(out_file, delimiter=' ', quoting=csv.QUOTE_MINIMAL, quotechar=' ', lineterminator=' ')
-for k, v in count_dict.items():
-    writer.writerow(["\nThe number of", k, "is", v])
+try:
+    writer = csv.writer(out_file, delimiter=' ', quoting=csv.QUOTE_MINIMAL, quotechar=' ', lineterminator=' ')
+    for k, v in count_dict.items():
+        writer.writerow(["\nThe number of", k, "is", v])
+finally:
+    out_file.close()
