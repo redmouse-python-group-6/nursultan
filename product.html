@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible", content="IE=edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">
+							<img src="img/arduino_logo.png" alt="" style="width: 45px">
+					</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+						<span class="sr-only">Открыть навигацию</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+				</div>
+				
+					<div class="collapse navbar-collapse" id="responsive-menu">
+						<ul class="nav navbar-nav">
+							<li class="item"><a  class="link link_help" href="#">Магазин</a></li>
+							<li class="item dropdown">
+								<a  class="link1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Проекты 
+									<b class="caret"></b>
+									<ul class="dropdown-menu">
+										<li><a href="#" class="link__b">Пункт1</a></li>
+										<li><a href="#" class="link__b">Пункт2</a></li>
+										<li><a href="#" class="link__b">Пункт3</a></li>
+									</ul>
+								</a>
+							</li>
+							<li class="item"><a  class="link" href="#">Доставка</a></li>
+							<li class="item"><a  class="link" href="#">Помощь консультация</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<form method="get" action="/search/" class="navbar-form hidden-sm">
+								    <div class="search input-group">
+								        <span class="input-group-btn">
+								            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+								        </span>
+								        <input type="search" name="query" class="form-control" placeholder="Найти товары" id="search">
+								    </div>
+								</form>
+							</li>
+							<li><a href="#" class="link" data-toggle="modal" data-target="#modal-1">Регистрация</a></li>
+							<li><a href="#" class="link" data-toggle="modal" data-target="#modal-2">Войти</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+
+	<section class="main container main__con">
+		<div class="row">
+		<aside class="col-md-3">
+			<div class="list-group">
+				<span class="list-group-item nav__style">Каталог товаров</span>
+				<a href="#" class="list-group-item">3D принтеры</a>
+				<div class="dropdown">
+					<a href="#" class="list-group-item  dropdown-toggle a__my__style" data-toggle="dropdown">
+						Платы<b class="caret"></b>
+						<div class="dropdown-menu dropdown__position">
+						        <a href="#" class="list-group-item">
+						        	Arduino    
+						        </a>
+						        <a href="#" class="list-group-item">	
+						        	Raspberry Pi
+						        </a>
+						      
+						</div>
+					
+				</div>
+				<a href="#" class="list-group-item">Модули</a>
+				<a href="#" class="list-group-item">Сенсоры</a>
+				<div class="dropdown">
+					<a href="#" class="list-group-item dropdown-toggle a__my__style" data-toggle="dropdown">
+						Механика<b class="caret"></b>
+						<div class="dropdown-menu dropdown__position">
+						        <a href="#" class="list-group-item">
+						        	Моторы     
+						        </a>
+						        <a href="#" class="list-group-item">	
+						        	Сервоприводы
+						        </a>
+						        <a href="#" class="list-group-item">Шаговые двигатели</a> 
+							</div>
+					
+				</div>
+				<a href="#" class="list-group-item">Сенсоры</a>
+			</div>
+		</aside>
+		    <section class="post col-md-9">
+				<article class="post clearfix">
+				<h2>Названия товара</h2>
+				<div class="contailner">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="thumbnail">
+							<img src="img/1.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="thumbnail">
+								<div class="list-group text-center">
+									<span class="list-group-item nav__style"><h4>Цена: 750 сом</h4></span>
+									<span  href="#" class="list-group-item"><p>Есть в наличие</p>
+								
+							        	<button type="button" class="btn btn-success btn-lg  btn-block">
+												<i class="glyphicon glyphicon-shopping-cart"></i>
+												<span href="" class="hidden-xs hidden-sm hidden-md">в корзину</span>
+										</button>
+										<button type="button" class="btn btn-success btn-lg  btn-block" data-toggle="tooltip" title="" data-original-title="В закладки">
+												<i class="glyphicon glyphicon-heart"></i>
+											</button>
+									
+									</span>
+									
+							      	
+						      		
+									
+								</div>
+							</div>
+						</div>
+
+				
+						<div class="col-md-12">
+						<div class="thumbnail">
+							
+							<p class="text__product">
+								<div class="description__col">
+									Arduino Ethernet Shield позволяет подключить плату Arduino к сети. Она основана на ethernet -микросхеме Wiznet W5100 (datasheet). Wiznet W5100 поддерживает стеки TCP and UDP в IP-сети.<br/> Он поддерживает до четырёх одновременных подключений к сокетам. Для создания скетчей, которые подключаются к сети при помощи данной платы, используйте библиотекуEthernet. Данная плата соединяется с платой Arduino при помощи длинных штырьков, проходящих через неё. Это позволяет не именять расположение выводов и устанавливать другие платы поверх неё.<br/> 
+									Плата Ethernet Shield имеет стандартный разём RJ-45 со встроенным линейный трансформатором и опцией Power over Ethernet<br/> 
+									Последние версии платы имеют разъём для карт типпа micro-SD, который может использоваться для хранения файлов и работы с ними по сети. Она совместима с Arduino Uno и Mega (при использовании библиотеки Ethernet library). Кардридер microSD доступен при помощи библиотеки SD Library.При применении этой библиотеки вывод 4 используется для сигнала SS (Slave Select).<br/> 
+									Последние версии платы также имеют контроллер сброса, который позволяет быть уверенным в правильном перезапуске W5100 при запуске. Предыдущие версии платы были не совместимы с Arduino Mega и требовали ручного сброса после включения. Предыдущая версия платы имела разём для полноразмерной карты SD, в настоящее время не поддерживается.
+								</div>
+								</p>
+							
+							</div>
+						</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+</article>
+	</section>
+
+	<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Contact </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Important Links </h3>
+                    <ul>
+                        <li> <a href="#"> Admission </a> </li>
+                        <li> <a href="#"> Academic </a> </li>
+                        <li> <a href="#"> Career </a> </li>
+                        <li> <a href="#"> Administration </a> </li>
+                        <li> <a href="#"> Notice </a> </li>
+                        <li> <a href="#"> Tender </a> </li>
+                        <li> <a href="login.php"> Teacher Login </a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Location </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © 2017, JKKNIU. All rights reserved.</p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                    <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom-->
+</footer>
+
+	<div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="false">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal">
+						<i class="glyphicon glyphicon-remove-circle"></i>
+					</button>
+					<h4 class="modal-title text-center">Регистрация</h4>
+				</div>
+				<div class="modal-body">
+					У вас уже есть аккаунт?
+					<a href="#" data-signup="1" rel="nofollow">войти</a>
+					<form action="/signup/" method="post">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="data[firstname]" id="frmsignup-name" class="form-control" placeholder="Имя">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="data[lastname]" id="frmsignup-lastname" class="form-control" placeholder="Фамилия">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <input type="text" name="data[email]" id="frmsignup-email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                            <input type="password" name="data[password]" id="frmsignup-password" class="form-control" placeholder="Пароль">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                            <input type="password" name="data[password_confirm]" id="frmsignup-confirm" class="form-control" placeholder="Подтвердите пароль">
+                                        </div>
+                                    </div>
+                                    <div class="row captcha"></div>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <input type="submit" value="Зарегистрироваться" class="btn-dsv btn-block">
+                                        </div>
+                                    </div>
+                                </form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger modal__btn" type="button" data-dismiss="modal">
+						Отмена
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="false">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal">
+						<i class="glyphicon glyphicon-remove-circle"></i>
+					</button>
+					<h4 class="modal-title text-center">Войти</h4>
+				</div>
+				<div class="modal-body">
+					У вас нет аккаунта?
+					<a href="#" data-signup="1" rel="nofollow">регистрацию</a>
+					<form action="/login/" method="post">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="login" id="frmlogin-email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                            <input type="password" name="password" id="frmlogin-password" class="form-control" placeholder="Пароль">
+                                        </div>
+                                    </div>
+                                    <p><a href="#" data-forgot="1" rel="nofollow">Забыли пароль?</a></p>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <input type="hidden" name="wa_auth_login" value="1">
+                                            <input type="submit" value="Войти" class="btn-dsv btn-block">
+                                        </div>
+                                    </div>
+                                </form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger modal__btn" type="button" data-dismiss="modal">
+						Отмена
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
