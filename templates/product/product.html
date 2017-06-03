@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block corusel %}
+{% endblock corusel %}
+{% block body_content %}
+    <section class="post col-md-9">
+				<article class="post clearfix">
+				<h2>Названия товара</h2>
+				<div class="contailner">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="thumbnail">
+							<img src="{{ product.product_image.url }}" alt="">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="thumbnail">
+								<div class="list-group text-center">
+									<span class="list-group-item nav__style"><h4>Цена: {{ product.product_prices }} сом</h4></span>
+									<span  href="#" class="list-group-item"><p>Есть в наличие</p>
+
+							        	<button type="button" class="btn btn-success btn-lg  btn-block">
+												<i class="glyphicon glyphicon-shopping-cart"></i>
+												<span href="" class="hidden-xs hidden-sm hidden-md">в корзину</span>
+										</button>
+										<button type="button" class="btn btn-success btn-lg  btn-block" data-toggle="tooltip" title="" data-original-title="В закладки">
+												<i class="glyphicon glyphicon-heart"></i>
+											</button>
+
+									</span>
+
+
+
+
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-12">
+						<div class="thumbnail">
+
+							<p class="text__product">
+								<div class="description__col">
+									 {{ product.product_overview }}
+								</div>
+								</p>
+
+							</div>
+						</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+</article>
+	</section>
+{% endblock %}
+
