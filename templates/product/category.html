@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% load static %}
-{% block nav_category %}
-		<aside class="col-md-3">
+{{% block nav_category %}
+	<aside class="col-md-3">
 			<div class="list-group">
 				<span class="list-group-item nav__style">Каталог товаров</span>
                 {% for categ in categorys%}
@@ -32,11 +32,10 @@
             </div>
 		</aside>
         {% endblock nav_category %}
-
 {% block body_content %}
 		    <section class="post col-md-9">
 				<article class="post clearfix">
-				<h2>Новые поступления</h2>
+				<h2>{{ category.category_title }}</h2>
 				<div class="contailner">
 					<div class="row">
 						{% for product in products %}

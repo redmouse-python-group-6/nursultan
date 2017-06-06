@@ -25,7 +25,7 @@
 			<div class="container">
                 {% block header_navbar_header %}
 				<div class="navbar-header">
-					<a href="#" class="navbar-brand">
+					<a href="{% url "index" %}" class="navbar-brand">
 							<img src="{% static "img/arduino_logo.png" %}" alt="" style="width: 45px">
 					</a>
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
@@ -39,7 +39,7 @@
                     {% block header_navbar_collapse %}
 					<div class="collapse navbar-collapse" id="responsive-menu">
 						<ul class="nav navbar-nav">
-							<li class="item"><a  class="link link_help" href="#">Магазин</a></li>
+							<li class="item"><a  class="link link_help" href="{% url "index" %}">Магазин</a></li>
 							<li class="item dropdown">
 								<a  class="link1" href="#" class="dropdown-toggle" data-toggle="dropdown">
 									Проекты
@@ -117,43 +117,7 @@
 	<section class="main container main__con">
 		<div class="row">
         {% block nav_category %}
-		<aside class="col-md-3">
-			<div class="list-group">
-				<span class="list-group-item nav__style">Каталог товаров</span>
-				<a href="#" class="list-group-item">3D принтеры</a>
-				<div class="dropdown">
-					<a href="#" class="list-group-item  dropdown-toggle a__my__style" data-toggle="dropdown">
-                        Платы<b class="caret"></b></a>
-						<div class="dropdown-menu dropdown__position">
-						        <a href="#" class="list-group-item">
-						        	Arduino
-						        </a>
-						        <a href="#" class="list-group-item">
-						        	Raspberry Pi
-						        </a>
 
-						</div>
-
-				</div>
-				<a href="#" class="list-group-item">Модули</a>
-				<a href="#" class="list-group-item">Сенсоры</a>
-				<div class="dropdown">
-					<a href="#" class="list-group-item dropdown-toggle a__my__style" data-toggle="dropdown">
-                        Механика<b class="caret"></b></a>
-						<div class="dropdown-menu dropdown__position">
-						        <a href="#" class="list-group-item">
-						        	Моторы
-						        </a>
-						        <a href="#" class="list-group-item">
-						        	Сервоприводы
-						        </a>
-						        <a href="#" class="list-group-item">Шаговые двигатели</a>
-							</div>
-
-				</div>
-				<a href="#" class="list-group-item">Сенсоры</a>
-            </div>
-		</aside>
         {% endblock nav_category %}
             {% block body_content %}
 

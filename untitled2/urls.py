@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+
+from comments.views import create_comment
 from product import views as product_views
 from product import urls as product_urls
 
@@ -24,7 +26,9 @@ from product import urls as product_urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', product_views.index, name="index"),
-    url(r'^article/', include(product_urls, namespace='product')),
+    url(r'^product/', include(product_urls, namespace='product')),
+    url(r'^category/(?P<id>\w+)/', product_views.get_category, name='get_category'),
+    url(r'create_comment/(?P<id>\d+)/$', create_comment, name='create_comment'),
 ]
 
 if settings.DEBUG:

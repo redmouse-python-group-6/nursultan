@@ -1,23 +1,27 @@
-{% extends "layout.html" %}
+{% extends "product/index.html" %}
 {% load static %}
+{% block title %}
+    {{ product.product_name }}
+{% endblock %}
 {% block corusel %}
 {% endblock corusel %}
+
 {% block body_content %}
     <section class="post col-md-9">
 				<article class="post clearfix">
-				<h2>Названия товара</h2>
+				<h2>{{ product.product_name }}</h2>
 				<div class="contailner">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-7">
 							<div class="thumbnail">
 							<img src="{{ product.product_image.url }}" alt="">
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<div class="thumbnail">
 								<div class="list-group text-center">
 									<span class="list-group-item nav__style"><h4>Цена: {{ product.product_prices }} сом</h4></span>
-									<span  href="#" class="list-group-item"><p>Есть в наличие</p>
+									<span class="list-group-item"><p>Есть в наличие</p>
 
 							        	<button type="button" class="btn btn-success btn-lg  btn-block">
 												<i class="glyphicon glyphicon-shopping-cart"></i>
@@ -28,9 +32,6 @@
 											</button>
 
 									</span>
-
-
-
 
 								</div>
 							</div>
@@ -47,9 +48,27 @@
 								</p>
 
 							</div>
-						</div>
+                <div class="thumbnail">
+                    <h3>Отзыв </h3>
+                    <form action="{% url "create_comment" product.id%}" method="get">
+                        <textarea name="body" class="form-control" style="margin-bottom: 20px;"></textarea>
+                        <input type="submit" value="Отравить" class="btn btn-success">
+                    </form>
 
-						</div>
+                 </div>
+                <div class="thumbnail">
+                    {% for comment in comments %}
+                        <div style="padding: 5px 20px">
+                        <h4 style="color: #2a6496;">{{ comment.comment_author }}</h4>
+                        <p>{{ comment.comment_body }}</p>
+                            <h5 style="color: #888;">{{ comment.date_create|date:'H:i d.M.Y' }}</h5>
+                        <hr/>
+                        </div>
+                    {% endfor %}
+                </div>
+			</div>
+
+		</div>
 					</div>
 				</div>
 			</div>
