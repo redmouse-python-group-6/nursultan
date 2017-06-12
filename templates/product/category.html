@@ -1,37 +1,8 @@
-{% extends "layout.html" %}
+{% extends "product/index.html" %}
 {% load static %}
-{{% block nav_category %}
-	<aside class="col-md-3">
-			<div class="list-group">
-				<span class="list-group-item nav__style">Каталог товаров</span>
-                {% for categ in categorys%}
+{% block corusel %}
+{% endblock %}
 
-
-
-{#                    <a href="{% url "get_category" categ.id %}" class="list-group-item">#}
-{#                        {{ categ.category_title }}#}
-{#                    </a>#}
-
-
-                 <div class="dropdown">
-
-					<a href="{% url "get_category" categ.id %}" class="list-group-item  dropdown-toggle a__my__style" data-toggle="dropdown">
-                        {{ categ.category_title }}<b class="caret"></b></a>
-						<div class="dropdown-menu dropdown__position">
-                            {% for chaild in category_chaild %}
-                                {% if chaild.category_parent == categ %}
-                                <a href="{% url "get_category" chaild.id %}" class="list-group-item">
-						        	{{ chaild.category_title }}
-						        </a>
-                                {% endif %}
-                            {% endfor %}
-						</div>
-			    </div>
-
-                {% endfor %}
-            </div>
-		</aside>
-        {% endblock nav_category %}
 {% block body_content %}
 		    <section class="post col-md-9">
 				<article class="post clearfix">

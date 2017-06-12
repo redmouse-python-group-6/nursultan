@@ -65,8 +65,10 @@
 								    </div>
 								</form>
 							</li>
+                            {% block auth %}
 							<li><a href="#" class="link" data-toggle="modal" data-target="#modal-1">Регистрация</a></li>
 							<li><a href="#" class="link" data-toggle="modal" data-target="#modal-2">Войти</a></li>
+                                {% endblock %}
 						</ul>
 					</div>
                         {% endblock header_navbar_collapse %}
@@ -197,7 +199,7 @@
 				</div>
 				<div class="modal-body">
 					У вас уже есть аккаунт?
-					<a href="#" data-signup="1" rel="nofollow">войти</a>
+					<a href="{% url "auth:login" %}" data-signup="1" rel="nofollow">войти</a>
                     {% block modal_regist_form %}
 					<form action="/signup/" method="post">
                                     <div class="form-group">
@@ -262,7 +264,7 @@
 				</div>
 				<div class="modal-body">
 					У вас нет аккаунта?
-					<a href="#" data-signup="1" rel="nofollow">регистрацию</a>
+					<a href="{% url "auth:register" %}" data-signup="1" rel="nofollow">регистрацию</a>
                     {% block modal_come_form %}
 					<form action="/login/" method="post">
                                     <div class="form-group">
@@ -297,6 +299,8 @@
 	</div>
     {% endblock modal_come %}
 	{% endblock modal_fade %}
+    {% block modal_exit %}
+    {% endblock %}
 
     {% block js %}
     <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
